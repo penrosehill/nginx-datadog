@@ -1,5 +1,13 @@
 1. Update `BASE_IMAGE` and `NGINX_VERSION` on the `nginx-version-info` file with the desired AL2 version
 You can check the current version [here](https://docs.aws.amazon.com/elasticbeanstalk/latest/platforms/platform-history-docker.html)
+As an example, you can use this configuration
+
+``` nginx-version-info
+NGINX_VERSION=1.22.1
+BASE_IMAGE=amazonlinux:2.0.20230612.0
+NGINX_MODULES_PATH=/usr/share/nginx/modules
+```
+
 2. Run `./bin/docker_build.sh`
 3. Run `make build-in-docker`
 4. Once finished, run the following commands
