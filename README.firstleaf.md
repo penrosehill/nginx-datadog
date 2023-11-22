@@ -8,7 +8,7 @@ BASE_IMAGE=amazonlinux:2.0.20230612.0
 NGINX_MODULES_PATH=/usr/share/nginx/modules
 ```
 
-2. Run `./bin/docker_build.sh`
+2. Run `./bin/docker_build.sh --platforms linux/amd64`
 3. Run `make build-in-docker`
 4. Once finished, run the following commands
 ```
