@@ -1,3 +1,5 @@
+get the latest image from public.ecr.aws/amazonlinux/amazonlinux:<tag>
+
 1. Update `BASE_IMAGE` and `NGINX_VERSION` on the `nginx-version-info` file with the desired AL2 version
 You can check the current version [here](https://docs.aws.amazon.com/elasticbeanstalk/latest/platforms/platform-history-docker.html). As an example, you can use this configuration
 
