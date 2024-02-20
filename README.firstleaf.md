@@ -13,10 +13,13 @@ NGINX_MODULES_PATH=/usr/share/nginx/modules
 2. Run `./bin/docker_build.sh --platforms linux/amd64`
 3. Run `make build-in-docker`
 4. Once finished, run the following commands
+
 ```
+. nginx-version-info
+VERSION="${BASE_IMAGE#*:}"
 cd .docker-build/
 sudo mv libngx_http_datadog_module.so ngx_http_datadog_module.so
-sudo tar cvzf amazonlinux_2.0.<release-version>-ngx_http_datadog_module.so.tgz ngx_http_datadog_module.so
-gh release upload v1.0.0 amazonlinux_2.0.<release-version>-ngx_http_datadog_module.so.tgz
+sudo tar cvzf amazonlinux_$VERSION-ngx_http_datadog_module.so.tgz ngx_http_datadog_module.so
+gh release upload v1.0.4 amazonlinux_$VERSION-ngx_http_datadog_module.so.tgz
 ```
 Make sure you upload to the right release, in the example above we are uploading to the v1.0.0 release on the repo, which was the latest one comming from the original repo.
