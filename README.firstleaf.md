@@ -5,8 +5,8 @@ You can check the current version [here](https://docs.aws.amazon.com/elasticbean
 
 #### **`nginx-version-info`**
 ```
-NGINX_VERSION=1.22.1
-BASE_IMAGE=amazonlinux:2.0.20230612.0
+NGINX_VERSION=1.24.0
+BASE_IMAGE=amazonlinux:2023.3.20240219.0
 NGINX_MODULES_PATH=/usr/share/nginx/modules
 ```
 
